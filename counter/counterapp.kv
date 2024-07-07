@@ -1,12 +1,17 @@
-<MainBoxLayout>:
-    orientation: 'vertical'
+<MainGridLayout>:
+    orientation: 'lr-tb'
+    row: 3
     padding: 20
     spacing: 10
 
     Label:
-        id: my_label
-        text: 'Hello, World!'
+        id: count
+        text: '0'
 
     Button:
-        text: 'Click Me'
-        on_press: root.change_text()
+        text: '+'
+        on_press: root.inc_count()
+
+    Button:
+        text: '-'
+        on_press: root.dec_count()
